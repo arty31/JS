@@ -1,11 +1,33 @@
+var requirejs = require('requirejs');
+
+requirejs.config({
+    baseUrl: 'app/',
+  paths: {
+          nodeRequire: require
+      }
+
+});
+
+requirejs(['server_module'], function(server){
+  // The "app" dependency is passed in as "App"
+  // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function
+
 var expect  = require("chai").expect;
 var request = require("request");
 var sinon = require("sinon");
 
 describe("Sinon Tests Color Code Converter API", function() {
     
-    //Create a spy for the Request function
-    var requestSpy = sinon.spy(request, 'Request');
+      before (function(){
+          server.start();
+      });
+      
+      after (function(){
+          server.stop();
+      }); 
+      
+  //Create a spy for the Request function
+  var requestSpy = sinon.spy(request, 'Request');
 
   describe("RGB to Hex conversion", function() {
 
@@ -56,5 +78,6 @@ describe("Sinon Tests Color Code Converter API", function() {
     requestSpy.reset();
   }
   
+});
 
 });
