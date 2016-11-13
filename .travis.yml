@@ -8,6 +8,7 @@ env:
 - NODE_ENV=TEST
 before_install:
 - cd converter
+- npm install requirejs
 install:
   - npm install
 script:
