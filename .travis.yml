@@ -6,5 +6,9 @@ node_js:
 env:
 - MY_VAR=EverythignIsAwesome
 - NODE_ENV=TEST
+install:
+  - npm install
+script:
+- npm test
 
 
