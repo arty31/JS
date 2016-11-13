@@ -6,6 +6,8 @@ node_js:
 env:
 - MY_VAR=EverythignIsAwesome
 - NODE_ENV=TEST
+before_install:
+- cd converter
 install:
   - npm install
 script:
