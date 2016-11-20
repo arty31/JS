@@ -3,9 +3,9 @@
 language: node_js
 node_js:
   - 6
-env:
-- MY_VAR=EverythignIsAwesome
-- NODE_ENV=TEST
+#env:
+#- MY_VAR=EverythignIsAwesome
+#- NODE_ENV=TEST
 before_install:
 - cd converter
 - npm install requirejs
