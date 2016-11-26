@@ -1,8 +1,18 @@
-var expect    = require("chai").expect;
-var converter = require("../../app/converter");
+//define('converter_test_module',['chai','converter_module'], function(chai,converter) {
+//define('converter_test_module',['../../app/converter_module'], function(converter) {
+    
+describe("Converter module", function() {
 
+var converter = require ('../../app/converter_module');
+
+var expect = chai.expect;
+console.log('before describe');
 describe("Color Code Converter", function() {
-  describe("RGB to Hex conversion", function() {
+
+console.log('after describe');
+
+    
+    describe("RGB to Hex conversion", function() {
     it("converts the basic colors", function() {
       var redHex   = converter.rgbToHex(255, 0, 0);
       var greenHex = converter.rgbToHex(0, 255, 0);
@@ -25,4 +35,9 @@ describe("Color Code Converter", function() {
       expect(blue).to.deep.equal([0, 0, 255]);
     });
   });
+  
+ });
+ 
 });
+
+//});

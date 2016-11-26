@@ -1,4 +1,4 @@
-define([], function () {
+define('converter_module', function () {
 
     return {
 

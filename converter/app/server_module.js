@@ -1,4 +1,4 @@
-define([
+define('server_module',[
     'express',
     './converter_module'
 ], function (express, converter) {
