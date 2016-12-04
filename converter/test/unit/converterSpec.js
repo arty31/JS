@@ -3,7 +3,9 @@
     
 describe("Converter module", function() {
 
-var converter = require ('../../app/converter_module');
+//var converter = require ('../../app/converter_module');
+var converter = require ('../../app/converter');
+
 
 var expect = chai.expect;
 console.log('before describe');
